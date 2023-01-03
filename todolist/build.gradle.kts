@@ -16,7 +16,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-jdbc:3.0.1")
 	implementation("org.springframework.boot:spring-boot-devtools:3.0.1")
-	testImplementation("com.h2database:h2:2.1.214")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.0.1")
+	implementation("com.h2database:h2:2.1.214")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

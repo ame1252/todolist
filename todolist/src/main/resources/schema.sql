@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS todo_item (
+     id BIGINT NOT NULL AUTO_INCREMENT,
+     title VARCHAR(50) NOT NULL,
+     body VARCHAR(255),
+     is_completed BOOLEAN NOT NULL DEFAULT FALSE,
+     PRIMARY KEY (id)
+);
