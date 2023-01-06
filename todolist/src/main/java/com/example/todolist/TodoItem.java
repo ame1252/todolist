@@ -1,26 +1,18 @@
 package com.example.todolist;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-import java.util.Optional;
 
 @Entity
-@Table
 public class TodoItem {
 
     @Id
-    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    @Column
     public String title;
 
-    @Column
-    private String body;
+    public String body;
 
-    @Column
-    public boolean isCompleted;
+    public boolean isCompleted = false;
 }

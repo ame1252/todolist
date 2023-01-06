@@ -18,5 +18,13 @@ public class TodolistController {
         return todoRepository.findAll();
     }
 
+    @GetMapping("/add")
+    public TodoItem add() {
+        TodoItem item = new TodoItem();
+        item.title= "hoge2";
+        item.body = "hogebody2";
+        return todoRepository.save(item);
+    }
+
 
 }
