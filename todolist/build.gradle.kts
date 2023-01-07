@@ -14,10 +14,11 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.boot:spring-boot-starter-jdbc:3.0.1")
-	implementation("org.springframework.boot:spring-boot-devtools:3.0.1")
-	implementation("com.h2database:h2:2.1.214")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc")
+	implementation("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	developmentOnly("com.h2database:h2:2.1.214")
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
 }
 
 tasks.withType<Test> {

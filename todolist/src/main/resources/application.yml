@@ -4,15 +4,12 @@ spring:
     url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false
     username: sa
     password:
-    initialization-mode: always
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: create
-    defer-datasource-initialization: true
   sql:
     init:
       mode: always
+  devtools:
+    restart:
+      enabled: true
 
 
 h2:
