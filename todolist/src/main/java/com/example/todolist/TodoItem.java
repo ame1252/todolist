@@ -1,5 +1,9 @@
 package com.example.todolist;
 
+
+/**
+ * Tableと同じ構造のClassを用意する
+ */
 public class TodoItem {
 
     public Long id;
