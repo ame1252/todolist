@@ -1,19 +1,19 @@
 <script setup lang="ts">
-type TodoItem = {
-  id: number
-  title: string
-  body: string
-  is_completed: boolean
+import { ref, onMounted } from 'vue'
+
+const items = ref<TodoItem[]>([]);
+
+const fetchItems = async () => {
+  const hopge = fetch('http://localhost:8080/')
+    .then(res => res.json())
+    .then(data => items.value = data)
 }
 
-const value = (itemId: number): TodoItem =>{
-  return {id: itemId,
-    title: "たいとる",
-    body: "ぼでぃ",
-    is_completed: false
-  }
-} 
-const items = ref<TodoItem[]>([value(1), value(2), value(3)]);
+// 最初に実行する
+onMounted(() => {
+  fetchItems()
+})
+
 </script>
 
 <template>
