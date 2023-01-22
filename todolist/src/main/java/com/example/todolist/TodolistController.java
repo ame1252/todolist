@@ -34,4 +34,11 @@ public class TodolistController {
         String query = "DELETE FROM todo_item WHERE id = ?";
         return jdbcTemplate.update(query, id);
     }
+
+    @PostMapping("/add")
+    public int add() {
+        String query = "INSERT INTO todo_item(title, body, is_completed)"
+                     + " VALUES('default','default body', false);";
+        return jdbcTemplate.update(query);
+    }
 }
