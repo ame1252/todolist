@@ -29,4 +29,9 @@ public class TodolistController {
         return jdbcTemplate.update(query, id);
     }
 
+    @PostMapping("/{id}/delete")
+    public int delete(@PathVariable long id) {
+        String query = "DELETE FROM todo_item WHERE id = ?";
+        return jdbcTemplate.update(query, id);
+    }
 }
